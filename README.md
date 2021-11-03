@@ -7,18 +7,23 @@ Javascript Sorts Information.
 ## Table of Contents
 
 - [Description](#description)
-- [bubble](#bubble)
-- [merge-sort](#merge-sort)
+- [Bubble Sort](#bubble-sort)
+- [Merge Sort](#merge-sort)
+- [Quick Sort](#quick-sort)
 
 ---
 
-## Bubble
+## Bubble Sort
 
 ...
 
 ---
 
 ## Merge Sort
+
+---
+
+## Quick Sort
 
 ---
 
