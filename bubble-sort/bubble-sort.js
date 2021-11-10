@@ -26,6 +26,9 @@ const bubbleSort = (array) => {
 
 // const sorted = bubbleSort(unsortedArray);
 //good example to show how just for loop is not enough
+//join() returns an array as a string.
+//join() does not change the original array.
+
 const myArray = [3, 2, 1];
 console.log("Pre Sort Array:", myArray.join(" "));
 const sorted = bubbleSort(myArray);
