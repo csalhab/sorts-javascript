@@ -2,11 +2,9 @@
 const unsortedArray = [];
 
 // seed data in unsortedInputArray
-for (let i = 0; i < 100; i++) {
-  unsortedArray.push(Math.round(Math.random() * 100));
+for (let i = 0; i < 5; i++) {
+  unsortedArray.push(Math.round(Math.random() * 5));
 }
-
-console.log("unsortedArray values: " + unsortedArray);
 
 // TODO: create bubble sort array function
 const bubbleSort = (array) => {
@@ -19,6 +17,22 @@ const bubbleSort = (array) => {
   //must do all this in a loop
 
   //must perhaps wrap loop inside another loop to do entire array several times
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > array[i + 1]) {
+      console.log(".. pair to compare .. ");
+      console.log("array: " + array);
+      console.log("array[" + i + "]: " + array[i]);
+      console.log("array[" + (i + 1) + "]: " + array[i + 1]);
+      const tempBefore = array[i];
+      console.log("tempBefore: " + array[i]);
+      array[i] = array[i + 1];
+      console.log(".. compared pair ..");
+      console.log("array[" + i + "]: " + array[i]);
+      array[i + 1] = tempBefore;
+      console.log("array[" + (i + 1) + "]: " + array[i + 1]);
+    }
+  }
 
   //return array when swapping done
   return array;
@@ -33,4 +47,11 @@ const myArray = [3, 2, 1];
 console.log("Pre Sort Array:", myArray.join(" "));
 const sorted = bubbleSort(myArray);
 console.log("Post Sort Array:", sorted.join(" "));
+console.log("DONE!");
+
+console.log("unsortedArray values: " + unsortedArray);
+
+console.log("Pre Sort Array:", unsortedArray.join(" "));
+const sortedArr = bubbleSort(unsortedArray);
+console.log("Post Sort Array:", sortedArr.join(" "));
 console.log("DONE!");
