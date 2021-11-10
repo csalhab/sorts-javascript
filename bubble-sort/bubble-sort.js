@@ -29,5 +29,5 @@ const bubbleSort = (array) => {
 const myArray = [3, 2, 1];
 console.log("Pre Sort Array:", myArray.join(" "));
 const sorted = bubbleSort(myArray);
-console.log("Post Sort Array:", sorted);
+console.log("Post Sort Array:", sorted.join(" "));
 console.log("DONE!");
