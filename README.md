@@ -37,6 +37,19 @@ Iteration 3: [**1,4**,5,7,8] → [1,**4,5**,7,8] → [1,4,**5,7**,8] → [1,4,5,
 
 Note that after Iteration 2 the array is already sorted. Bubble Sort, however, needs a final pass through the array to ensure that no other swaps are necessary before returning the array, hence Iteration 3.
 
+### Sample Code & Results
+
+Code:
+
+for (let i = 0; i < 100; i++) {
+unsortedInputArray.push(Math.round(Math.random() \* 100));
+}
+
+Results:
+
+(git branch): [main] $ node bubble-sort/bubble-sort.js
+unsortedInputArray: 98,70,58,5,70,75,90,27,58,80,89,26,8,84,26,79,7,38,47,50,75,51,49,36,2,66,95,31,54,63,96,57,82,91,94,56,14,36,46,75,77,32,8,4,84,55,50,10,27,18,97,28,24,93,54,65,98,36,45,13,99,33,83,43,13,0,32,27,40,75,71,38,67,35,48,85,44,71,44,49,35,63,96,96,7,21,79,68,59,77,49,95,10,87,70,30,24,27,68,100
+
 ### Discussion Points
 
 - **Point 1**: Can you think of a way to solve this problem with force?
