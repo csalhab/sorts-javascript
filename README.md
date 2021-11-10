@@ -41,16 +41,16 @@ Note that after Iteration 2 the array is already sorted. Bubble Sort, however, n
 
 Code:
 
-for (let i = 0; i < 100; i++) {
-unsortedInputArray.push(Math.round(Math.random() \* 100));
-}
+    for (let i = 0; i < 100; i++) {
+    unsortedInputArray.push(Math.round(Math.random() \* 100));
+    }
 
 Results:
 
-(git branch): [main] $ node bubble-sort/bubble-sort.js
-unsortedInputArray: 98,70,58,5,70,75,90,27,58,80,89,26,8,84,26,79,7,38,47,50,75,51,49,36,2,66,95,31,54,63,96,57,82,91,94,56,14,36,46,75,77,32,8,4,84,55,50,10,27,18,97,28,24,93,54,65,98,36,45,13,99,33,83,43,13,0,32,27,40,75,71,38,67,35,48,85,44,71,44,49,35,63,96,96,7,21,79,68,59,77,49,95,10,87,70,30,24,27,68,100
+    (git branch): [main] $ node bubble-sort/bubble-sort.js
+    unsortedInputArray: 98,70,58,5,70,75,90,27,58,80,89,26,8,84,26,79,7,38,47,50,75,51,49,36,2,66,95,31,54,63,96,57,82,91,94,56,14,36,46,75,77,32,8,4,84,55,50,10,27,18,97,28,24,93,54,65,98,36,45,13,99,33,83,43,13,0,32,27,40,75,71,38,67,35,48,85,44,71,44,49,35,63,96,96,7,21,79,68,59,77,49,95,10,87,70,30,24,27,68,100
 
-Code:
+Code (1st pass only):
 
     // Create array that will hold unsorted values
     const unsortedArray = [];
@@ -110,7 +110,7 @@ Code:
     console.log("Post Sort Array:", sortedArr.join(" "));
     console.log("DONE!");
 
-Results:
+Results (1st pass only):
 
     (git branch): [main] $ node bubble-sort/bubble-sort.js
     Pre Sort Array: 3 2 1
@@ -169,6 +169,121 @@ Results:
     array[3]: 2
     array[4]: 3
     Post Sort Array: 1 1 2 2 3
+    DONE!
+
+Code (however many passes are needed):
+
+    // Create array that will hold unsorted values
+    const unsortedArray = [];
+
+    // seed data in unsortedInputArray
+    for (let i = 0; i < 5; i++) {
+    unsortedArray.push(Math.round(Math.random() * 5));
+    }
+
+    // create bubble sort array function
+    const bubbleSort = (array) => {
+    console.log("inside bubbleSort array function, array received: " + array);
+
+    //bubble sort compares adjacent values
+    //if item that's before is greater than the item that follows it
+    //then swap the items
+    //in order to swap, must first store item that's before temporarily
+    //must do all this in a loop
+
+    //must perhaps wrap loop inside another loop to do entire array several times
+
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+        if (array[j] > array[j + 1]) {
+            console.log(".. pair to compare .. ");
+            console.log("array: " + array);
+            console.log("array[" + j + "]: " + array[j]);
+            console.log("array[" + (j + 1) + "]: " + array[j + 1]);
+            const tempBefore = array[j];
+            console.log("tempBefore: " + array[j]);
+            array[j] = array[j + 1];
+            console.log(".. compared pair ..");
+            console.log("array[" + j + "]: " + array[j]);
+            array[j + 1] = tempBefore;
+            console.log("array[" + (j + 1) + "]: " + array[j + 1]);
+        }
+        }
+    }
+
+    //return array when swapping done
+    return array;
+    };
+
+    // const sorted = bubbleSort(unsortedArray);
+    //good example to show how just for loop is not enough
+    //join() returns an array as a string.
+    //join() does not change the original array.
+
+    const myArray = [3, 2, 1];
+    console.log("Pre Sort Array:", myArray.join(" "));
+    const sorted = bubbleSort(myArray);
+    console.log("Post Sort Array:", sorted.join(" "));
+    console.log("DONE!");
+
+    console.log("unsortedArray values: " + unsortedArray);
+
+    console.log("Pre Sort Array:", unsortedArray.join(" "));
+    const sortedArr = bubbleSort(unsortedArray);
+    console.log("Post Sort Array:", sortedArr.join(" "));
+    console.log("DONE!");
+
+Results (however many passes are needed):
+
+    (git branch): [main] $ node bubble-sort/bubble-sort.js git add -A
+    Pre Sort Array: 3 2 1
+    inside bubbleSort array function, array received: 3,2,1
+    .. pair to compare ..
+    array: 3,2,1
+    array[0]: 3
+    array[1]: 2
+    tempBefore: 3
+    .. compared pair ..
+    array[0]: 2
+    array[1]: 3
+    .. pair to compare ..
+    array: 2,3,1
+    array[1]: 3
+    array[2]: 1
+    tempBefore: 3
+    .. compared pair ..
+    array[1]: 1
+    array[2]: 3
+    .. pair to compare ..
+    array: 2,1,3
+    array[0]: 2
+    array[1]: 1
+    tempBefore: 2
+    .. compared pair ..
+    array[0]: 1
+    array[1]: 2
+    Post Sort Array: 1 2 3
+    DONE!
+    unsortedArray values: 0,2,5,2,2
+    Pre Sort Array: 0 2 5 2 2
+    inside bubbleSort array function, array received: 0,2,5,2,2
+    .. pair to compare ..
+    array: 0,2,5,2,2
+    array[2]: 5
+    array[3]: 2
+    tempBefore: 5
+    .. compared pair ..
+    array[2]: 2
+    array[3]: 5
+    .. pair to compare ..
+    array: 0,2,2,5,2
+    array[3]: 5
+    array[4]: 2
+    tempBefore: 5
+    .. compared pair ..
+    array[3]: 2
+    array[4]: 5
+    Post Sort Array: 0 2 2 2 5
     DONE!
 
 ### Discussion Points

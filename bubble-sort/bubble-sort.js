@@ -19,18 +19,20 @@ const bubbleSort = (array) => {
   //must perhaps wrap loop inside another loop to do entire array several times
 
   for (let i = 0; i < array.length; i++) {
-    if (array[i] > array[i + 1]) {
-      console.log(".. pair to compare .. ");
-      console.log("array: " + array);
-      console.log("array[" + i + "]: " + array[i]);
-      console.log("array[" + (i + 1) + "]: " + array[i + 1]);
-      const tempBefore = array[i];
-      console.log("tempBefore: " + array[i]);
-      array[i] = array[i + 1];
-      console.log(".. compared pair ..");
-      console.log("array[" + i + "]: " + array[i]);
-      array[i + 1] = tempBefore;
-      console.log("array[" + (i + 1) + "]: " + array[i + 1]);
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] > array[j + 1]) {
+        console.log(".. pair to compare .. ");
+        console.log("array: " + array);
+        console.log("array[" + j + "]: " + array[j]);
+        console.log("array[" + (j + 1) + "]: " + array[j + 1]);
+        const tempBefore = array[j];
+        console.log("tempBefore: " + array[j]);
+        array[j] = array[j + 1];
+        console.log(".. compared pair ..");
+        console.log("array[" + j + "]: " + array[j]);
+        array[j + 1] = tempBefore;
+        console.log("array[" + (j + 1) + "]: " + array[j + 1]);
+      }
     }
   }
 
