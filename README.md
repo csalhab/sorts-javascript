@@ -322,6 +322,8 @@ Results (however many passes are needed):
 
 ## Merge Sort
 
+Merge Sort algorithm requires a bit of knowledge in recursion and both time and space complexity for an algorithm. The algorithm works by breaking the input array in half over and over again until the array's values are all in their own array. They are then compared to one another and merged back together in order.
+
 ---
 
 ## Quick Sort
