@@ -343,7 +343,7 @@ For example:
 
 ![Merge Sort Diagram.](assets/images/merge-sort.png)
 
-[Walk-thru on VisualGo.net .. make sure to select "MER" item in the top nav (as there are other sorts available)](https://visualgo.net/en/sorting?slide=1)
+[Walk-thru on VisualGo.net .. make sure to select "MER" item in the top nav (as there are other sorts available) & then click "GO"](https://visualgo.net/en/sorting?slide=1)
 
 ### Discussion Points
 
