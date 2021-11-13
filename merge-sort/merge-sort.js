@@ -6,6 +6,8 @@ for (let i = 0; i < 15; i++) {
   unsortedArray.push(Math.round(Math.random() * 15));
 }
 
+console.log("Pre Sort: " + unsortedArray);
+
 // TODO: create mergeArrays() function to merge sorted values
 const mergeArrays = (leftArray, rightArray) => {
   //create new array that our sorted array values from left and right will go into
@@ -32,7 +34,7 @@ const mergeArrays = (leftArray, rightArray) => {
   // since the while loop may not have gotten to every index of the leftArray or rightArray arrays, we concatenate the leftover values back into resultArray
   return resultArray
     .concat(leftArray.slice(leftIndex))
-    .concat(rightIndex.slice(rightIndex));
+    .concat(rightArray.slice(rightIndex));
 };
 
 // TODO: create splitArray() function
@@ -60,5 +62,8 @@ const splitArray = (array) => {
 };
 
 //INITIALIZATION - kick it off
+const sorted = splitArray(unsortedArray);
 
 //ECHO OUT - log out values
+console.log("Post Sort: ", sorted.join(" "));
+console.log("DONE!!");
