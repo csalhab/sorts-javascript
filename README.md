@@ -343,6 +343,8 @@ For example:
 
 ![Merge Sort Diagram.](assets/images/merge-sort.png)
 
+[Walk-thru on VisualGo.net .. make sure to select "MER" item in the top nav (as there are other sorts available)](https://visualgo.net/en/sorting?slide=1)
+
 ### Discussion Points
 
 - **Point 1**: How would we get the middle point of an array? Can we simply split the array's length in half?
