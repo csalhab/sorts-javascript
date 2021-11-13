@@ -322,7 +322,26 @@ Results (however many passes are needed):
 
 ## Merge Sort
 
-Merge Sort algorithm requires a bit of knowledge in recursion and both time and space complexity for an algorithm. The algorithm works by **breaking the input array in half over and over again until the array's values are all in their own array. They are then compared to one another and merged back together in order.**
+Merge Sort uses the concept of divide-and-conquer to sort the given list of elements.
+
+Its algorithm requires a bit of knowledge in recursion and both time and space complexity for an algorithm.
+
+The algorithm works by **breaking the input array in half over and over again until the array's values are all in their own array. They are then compared to one another and merged back together in order.**
+
+This allows for it to break down the problem, the array, into smaller subproblems until they become simple enough to solve directly.
+
+Here are the steps Merge Sort takes:
+
+1. Split the given list into two halves (roughly equal halves in case of a list with an odd number of elements).
+2. Continue dividing the subarrays in the same manner until you are left with only single element arrays.
+3. Then starting with the single element arrays, **Merge** the subarrays so that each merged subarray is sorted.
+4. Repeat step 3 until it ends up with a single sorted array.
+
+For example:
+
+[5, 9, 7, 4, 15, 3, 8]:
+
+![Merge Sort Diagram.](assets/images/merge-sort.png)
 
 ---
 
