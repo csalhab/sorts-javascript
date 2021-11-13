@@ -343,6 +343,38 @@ For example:
 
 ![Merge Sort Diagram.](assets/images/merge-sort.png)
 
+### Discussion Points
+
+- **Point 1**: How would we get the middle point of an array? Can we simply split the array's length in half?
+
+- **Good Answer**: We can simply split the array's length in half and use that as the index, but we'll want to floor the value first just in case there is an odd number of elements in the array.
+
+- **Note**: Unlike a quick sort algorithm, we are more concerned about breaking our array in half as many times as possible and then sorting it after. To get the middle value, however, we'll want to make sure it's a whole number because it needs to represent an index in the array.
+
+---
+
+- **Point 2**: When merging two arrays together, do we need to loop through every index of each array?
+
+- **Good Answer**: No, we will loop through both arrays until there isn't a next index to check in one of them. We'll get through one array, but the other one will have leftover values that will be concatenated onto the output array.
+
+- **Note**: There is no guarantee that both arrays will be the same length, which is fine. The point of this merge functionality is to compare two arrays and create a new array out of it with all of the values merged in order.
+
+---
+
+- **Point 3**: How will the function know when to stop splitting the input array into smaller arrays for comparison and sorting?
+
+- **Good Answer**: It will know to stop splitting the input array and return it as-is when there is only one element left in the array.
+
+- **Note**: We need to check if the array only has one element left or less before attempting to split it again. The `mergeSort()` function will stop recursively calling itself once every single element in the input array has been split.
+
+---
+
+- **Point 4**: What would be a good reason to use a merge sort algorithm compared to other sorting algorithms? What would be a reason NOT to use one?
+
+- **Good Answer**: A good reason to use a merge sort algorithm is that its Big O complexity in a worst-case scenario is still `O(n log(n))`, whereas some other algorithms may see a Big O complexity of `O(n^2)`, making them slower. A reason to not use this algorithm is that it takes up more space in memory because it is creating and storing numerous arrays.
+
+- **Note**: If the machine running this algorithm is powerful enough, having a larger space complexity will be okay if it means a more stable time complexity of `O(n log(n))`. Other sorting algorithms take up less memory during execution but may take longer to complete.
+
 ---
 
 ## Quick Sort
