@@ -6,10 +6,11 @@ for (let i = 0; i < 15; i++) {
   unsortedArray.push(Math.round(Math.random() * 15));
 }
 
-//split unsorted array until ending up with multiple arrays that only contain one element
-
 // TODO: create mergeArrays() function to merge sorted values
-//create new array that our sorted array values from left and right will go into
+const mergeArrays = (leftArray, rightArray) => {
+  //create new array that our sorted array values from left and right will go into
+  const resultArray = [];
+};
 
 //keep track of what index we're at in each array for the following loop
 
@@ -25,6 +26,7 @@ for (let i = 0; i < 15; i++) {
 // since the while loop may not have gotten to every index of the leftArray or rightArray arrays, we concatenate the leftover values back into resultArray
 
 // TODO: create splitArray() function
+//split unsorted array until ending up with multiple arrays that only contain one element
 const splitArray = (array) => {
   // if incoming array is empty, it doesn't need to be sorted, so return it
   // this must be in place, or the recursive function calls will never end
