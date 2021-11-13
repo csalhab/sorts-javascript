@@ -21,19 +21,31 @@ for (let i = 0; i < 15; i++) {
 
 //else if the rightArray value is less than the leftArray value, push that value into the resultArray instead and move onto the next index of the rightArray
 
-// the resultArray may not be sorted just yet, but it's closer to being sorted so the mergeSort() function can split it and sort it again
+// the resultArray may not be sorted just yet, but it's closer to being sorted so the splitArray() function can split it and sort it again
 // since the while loop may not have gotten to every index of the leftArray or rightArray arrays, we concatenate the leftover values back into resultArray
 
-// TODO: create mergeSort() function to merge sorted values
+// TODO: create splitArray() function
+const splitArray = (array) => {
+  // if incoming array is empty, it doesn't need to be sorted, so return it
+  // this must be in place, or the recursive function calls will never end
+  if (array.length <= 1) {
+    return array;
+  }
 
-// if input array is empty, it doesn't need to be sorted, so return it
-// this must be in place, or the recursive function calls will never end
+  // get index of the middle point of the array so we can split it in half
+  const middle = Math.floor(array.length / 2);
 
-// get index of the middle point of the array so we can split it in half
+  // split the array in half so we can compare values of smaller arrays and merge them together sorted later
+  const left = array.slice(0, middle);
+  const right = array.slice(middle);
+  //NOTE:
+  //slice() returns selected elements in an array, as a new array.
+  //slice() selects from a given start, up to a (not inclusive) given end.
+  //slice() does not change the original array.
 
-// split the array in half so we can compare values of smaller arrays and merge them together sorted later
-
-// use recursion to continuously split left and right arrays in half and sort with mergeArrays() until there's nothing left to sort and return the finished/sorted array
+  // use recursion to continuously split left and right arrays in half and then sort with mergeArrays() until there's nothing left to sort and return the finished/sorted array
+  return mergeArrays(splitArray(left), splitArray(right));
+};
 
 //INITIALIZATION - kick it off
 
