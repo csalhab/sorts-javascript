@@ -389,6 +389,8 @@ For example:
 
 Quick Sort randomly selects a value in the array to serve as the "pivot" value. This value will then be used to sort the rest of the array's elements by pushing them into new arrays to hold elements lesser than or equal the pivot value (to the left) and elements greater than the pivot value (to the right). We then run those left and right arrays through the same sorting functionality over and over again until the left and right arrays are sorted and then concatenate them together and return the full sorted array.
 
+Eventually as we chop arrays up, we get to a place where there is just 1 item in array. O(log n).
+
 ---
 
 © 2021 All Rights Reserved.
