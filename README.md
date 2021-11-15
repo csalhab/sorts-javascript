@@ -7,9 +7,22 @@ Javascript Sorts Information.
 ## Table of Contents
 
 - [Description](#description)
+- [Selection Sort](#selection-sort)
 - [Bubble Sort](#bubble-sort)
 - [Merge Sort](#merge-sort)
 - [Quick Sort](#quick-sort)
+
+---
+
+## Selection Sort
+
+- [selection-sort.js](./selection-sort/selection-sort.js)
+
+Selection Sort finds the lowest number in array and if there is a lower number than it then swap it with starting number and then start in next item in array.
+
+The swap needs to make use of a temp var to hold when assignment happens.
+
+Has nested for loops so O(n)squared, exponential curve. Not efficient.
 
 ---
 
