@@ -1,6 +1,13 @@
 // Create our unsorted array
+const unsortedArray = [];
 
 // seed data in unsortedArray
+for (let i = 0; i < 10; i++) {
+  unsortedArray.push(Math.round(Math.random() * 50));
+}
+
+//ECHO OUT - log out unsorted values
+console.log("unsorted: " + unsortedArray);
 
 //TODO: create selectionSort() function
 //start by making the 1st element as the smallest number
@@ -14,4 +21,4 @@
 
 //INITIALIZATION - kick it off
 
-//ECHO OUT - log out values
+//ECHO OUT - log out sorted values
