@@ -20,9 +20,99 @@ Javascript Sorts Information.
 
 Selection Sort finds the lowest number in array and if there is a lower number than it then swap it with starting number and then start in next item in array.
 
+The idea behind selection sort is that you loop through the input array linearly, selecting the first smallest element, and then swap it to the first position. Then you loop through the array again using a linear scan and get the second smallest element, swap it to the second position, and so on and so forth until your array is completely sorted.
+
 The swap needs to make use of a temp var to hold when assignment happens.
 
 Has nested for loops so O(n)squared, exponential curve. Not efficient.
+
+Results:
+
+    (git branch): [main] $ node selection-sort/selection-sort.js
+    unsorted: 15,12,41,2,20,23,37,6,30,46
+    tracking smallest index: 0
+    tracking smallest value: 15
+    j value: 12
+    array[1]: 12 is smaller!
+    j value: 41
+    j value: 2
+    array[3]: 2 is smaller!
+    j value: 20
+    j value: 23
+    j value: 37
+    j value: 6
+    j value: 30
+    j value: 46
+    swapped, array[0]: 2
+    swapped array[3]: 15
+    tracking smallest index: 1
+    tracking smallest value: 12
+    j value: 41
+    j value: 15
+    j value: 20
+    j value: 23
+    j value: 37
+    j value: 6
+    array[7]: 6 is smaller!
+    j value: 30
+    j value: 46
+    swapped, array[1]: 6
+    swapped array[7]: 12
+    tracking smallest index: 2
+    tracking smallest value: 41
+    j value: 15
+    array[3]: 15 is smaller!
+    j value: 20
+    j value: 23
+    j value: 37
+    j value: 12
+    array[7]: 12 is smaller!
+    j value: 30
+    j value: 46
+    swapped, array[2]: 12
+    swapped array[7]: 41
+    tracking smallest index: 3
+    tracking smallest value: 15
+    j value: 20
+    j value: 23
+    j value: 37
+    j value: 41
+    j value: 30
+    j value: 46
+    tracking smallest index: 4
+    tracking smallest value: 20
+    j value: 23
+    j value: 37
+    j value: 41
+    j value: 30
+    j value: 46
+    tracking smallest index: 5
+    tracking smallest value: 23
+    j value: 37
+    j value: 41
+    j value: 30
+    j value: 46
+    tracking smallest index: 6
+    tracking smallest value: 37
+    j value: 41
+    j value: 30
+    array[8]: 30 is smaller!
+    j value: 46
+    swapped, array[6]: 30
+    swapped array[8]: 37
+    tracking smallest index: 7
+    tracking smallest value: 41
+    j value: 37
+    array[8]: 37 is smaller!
+    j value: 46
+    swapped, array[7]: 37
+    swapped array[8]: 41
+    tracking smallest index: 8
+    tracking smallest value: 41
+    j value: 46
+    tracking smallest index: 9
+    tracking smallest value: 46
+    POST sorted: 2,6,12,15,20,23,30,37,41,46
 
 ---
 
