@@ -120,7 +120,15 @@ Results:
 
 - [insertion-sort.js](./insertion-sort/insertion-sort.js)
 
-Insertioin Sort is similar to the way you sort playing cards in your hands and is a simple sorting algorithm that builds the final sorted array one item at a time.
+Insertion Sort is similar to the way you sort playing cards in your hands and is a simple sorting algorithm that builds the final sorted array one item at a time.
+
+The iteration starts at the second element. We consider the first element sorted by default.
+
+For each iteration, we keep track of the current element. Each current element will be the first element of the unsorted array - and each element before it will belong to the sorted array.
+
+Through a while loop, we go through the sorted array and shift elements to the right, opening up a space for the current element to be inserted.
+
+Once we find the proper place for it, the current element is inserted into the newly-opened slot. This process is repeated for each iteration until the array is sorted.
 
 It is much less efficient on large lists than more advanced algorithms such as quick sort or merge sort. O(n)squared because of nested for loops.
 
