@@ -116,6 +116,22 @@ Results:
 
 ---
 
+## Insertion Sort
+
+- [insertion-sort.js](./insertion-sort/insertion-sort.js)
+
+Insertioin Sort is similar to the way you sort playing cards in your hands and is a simple sorting algorithm that builds the final sorted array one item at a time.
+
+It is much less efficient on large lists than more advanced algorithms such as quick sort or merge sort. O(n)squared because of nested for loops.
+
+Steps:
+
+- pull a card out so that is the variable and then
+- find the spot to fit it into and
+- do it until done
+
+---
+
 ## Bubble Sort
 
 - [bubble-sort.js](./bubble-sort/bubble-sort.js)
