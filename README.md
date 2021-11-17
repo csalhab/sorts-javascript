@@ -2,7 +2,7 @@
 
 ## Description
 
-Javascript Sorts Information.
+Javascript Sorts explanations, code examples and results. Discussion points on some too.
 
 ## Table of Contents
 
